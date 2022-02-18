@@ -6,7 +6,8 @@ from datetime import datetime
 class Pessoa:
 
     def __init__(self: object, nome: str) -> None:
-        self.__nome = nome
+        self.__nome = nome              # o dunder __ torna o atributo privado
+        self.teste = 'teste atributo'   # assim é publico, da  pra usar Pessoa.teste
         self.__nascimento = datetime.now()
 
     def __str__(self: object) -> str:
@@ -55,3 +56,5 @@ print(f'Carro >> [{fusca}]')
 print(f'Carro.dirigir >> [{fusca.dirigir(vitor)}]')
 print(f'Carro.__dict__ >> [{fusca.__dict__}]')
 print(f'type motorista do carro >> [{type(fusca.motorista)}]') # Uma classe "dentro" da outra
+
+print(f'atributo sem dunder >> [{vitor.teste}]')
