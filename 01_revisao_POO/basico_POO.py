@@ -27,6 +27,10 @@ class Carro:
         if self.__motorista:
             return f'Carro do(a) {self.__motorista}'
         return f'Carro sem motorista'
+    
+    @property
+    def motorista(self):
+        return self.__motorista
 
     def dirigir(self: object, motorista: Pessoa) -> None:
         self.__motorista = motorista
@@ -37,3 +41,17 @@ class Carro:
 
     def parar(self: object):
         self.__velocidade = 0
+
+
+print(f'\n\n')
+print(f'----------------------------------------------------------------------------------------------------')
+print(f'>>> Exemplos de uso')
+
+vitor = Pessoa('Vitor Vicente')
+print(f'Pessoa >> [{vitor}]')
+fusca = Carro()
+print(f'Carro >> [{fusca}]')
+
+print(f'Carro.dirigir >> [{fusca.dirigir(vitor)}]')
+print(f'Carro.__dict__ >> [{fusca.__dict__}]')
+print(f'type motorista do carro >> [{type(fusca.motorista)}]') # Uma classe "dentro" da outra
