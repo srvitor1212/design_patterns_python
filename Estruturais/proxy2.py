@@ -1,3 +1,5 @@
+
+
 from abc import ABCMeta, abstractmethod
 
 
@@ -69,6 +71,7 @@ class Cliente:
 
 
 
+print(f'\n\n\n---------------------------------')
 if __name__ == '__main__':
     cliente = Cliente()
     cliente.fazer_pagamento()
